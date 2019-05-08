@@ -1,0 +1,13 @@
+NOTES!!!
+	after running the program multiple times
+	it appears that initially all the childprocesses printed sequentially
+	such as ABCDE
+
+	but afterwards usually the printouts became totally jumbled up
+	so they were mixed
+
+	also there was no guarantee that the child procesess would terminate
+	in sequential order either, sometiems the first started child
+	didnt stop first as would be perhaps intuitively expected
+
+	probbably this happened because of linux scheduling

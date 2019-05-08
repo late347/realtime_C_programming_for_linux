@@ -1,0 +1,32 @@
+answers for ex4A
+
+part1 
+
+a)
+(my sample input had been aaaaabbbbbcccccddddd\n) 
+ when fflush(stdout) is done before return 0; then I think that
+incomplete buffer will be outputted if there was less than the 5 chars
+Reason is in fflush(stdout) which does this behavior
+
+b) 
+(my sample input had been aaaaabbbbbcccccddddd\n) 
+with exit(0) only there was compiler warning 
+warning: implicit declaration of function ‘exit’
+ [-Wimplicit-function-declaration]
+
+the incomplete buf WAS still printed out at least for me.
+According to StackOverflow this exit(0) caused all
+opened streams with unwritten buffered data to be flushed
+https://stackoverflow.com/questions/31501142/should-we-use-exit-in-c
+It is allegedly part of C standard.
+
+
+c) 
+(my sample input had been aaaaabbbbbcccccddddd\n) 
+with the only return 0; and not using exit(0) or fflush(stdout)
+then the incomplete buffer was not printed out at program ending
+
+I'm not sure why exactly this incomplete buffer was not printed.
+
+Maybe it was because the stream is just closed with return 0; but without
+writing the incomplete buffer???

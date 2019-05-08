@@ -1,0 +1,21 @@
+answers for ex4A
+
+part1 
+
+a) when fflush(stdout) is done before return 0; then I think that
+incomplete buffer will be outputted if there was less than the 5 chars
+But ifthere was only return 0, and no fflush, then the incomplete
+ 5 chars will not be printed
+
+b) with exit(0) only there was compiler warning 
+warning: implicit declaration of function ‘exit’
+ [-Wimplicit-function-declaration]
+
+otherwise, the incomplete buf was still printed out at least for me
+(my sample input had been aaaaabbbbbcccccddddd\n) 
+
+
+c) with the only return 0; and not using exit(0) or fflush(stdout)
+then the incomplete buffer was not printed out at program ending.
+This may have been such that the main exits, with closing down 
+the streams that were open, but without flushing

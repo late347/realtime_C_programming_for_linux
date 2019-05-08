@@ -1,0 +1,27 @@
+test1begins...
+accessmode: w+r
+O_NONBLOCK: False
+O_APPEND: False
+T
+read succeeded, char was T
+A write succeeded
+test2begins...
+accessmode: r
+O_NONBLOCK: False
+O_APPEND: False
+read succeeded, char was 
+
+write failed Bad file descriptor
+test3begins...
+accessmode: r
+O_NONBLOCK: True
+O_APPEND: True
+read failed Resource temporarily unavailable
+write failed Bad file descriptor
+test4begins...
+accessmode: r
+O_NONBLOCK: False
+O_APPEND: True
+R
+read succeeded, char was R
+write failed Bad file descriptor

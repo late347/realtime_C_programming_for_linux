@@ -1,0 +1,49 @@
+exercixe 3B
+
+test1:
+	results were suchthat
+
+	accessmode: w+r
+	O_NONBLOCK: False
+	O_APPEND: False
+	k
+	read succeeded, char was k
+	A write succeeded
+
+test2:
+
+	results were such that
+	
+alltests:
+
+
+
+	$ ./AllTests 
+test1begins...
+accessmode: w+r
+O_NONBLOCK: False
+O_APPEND: False
+V
+read succeeded, char was V
+A write succeeded
+test2begins...
+accessmode: r
+O_NONBLOCK: False
+O_APPEND: False
+read succeeded, char was 
+
+write failed Bad file descriptor
+test3begins...
+accessmode: r
+O_NONBLOCK: True
+O_APPEND: True
+read failed Resource temporarily unavailable
+write failed Bad file descriptor
+test4begins...
+accessmode: r
+O_NONBLOCK: False
+O_APPEND: True
+Q
+read succeeded, char was Q
+write failed Bad file descriptor
+

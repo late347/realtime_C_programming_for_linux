@@ -1,0 +1,25 @@
+exercise 3A
+answers:
+
+phase 1:
+	the size was half of the expected about 400k, but inside the file
+	it was so that there were blocks of BBBB and blocks of AAAA
+	much of the data was overwritten by the processes instead of appended
+	properly to the file
+
+
+phase 2:
+	the size with the fix was larger, but not completely correct
+	at least for myself. the size of logfile was 797824 bytes, which
+	indicated that some of the date got lost. Looking at the logfile
+	with cat exlog.txt
+
+	it looked like it was missing 2176 bytes
+
+	it looked like early on there were good sequences of BBBBAAAABBBB...
+	but already at the end it could be seen that the BBBB ended earlier
+	so there was only AAAA at the end of the logfile
+
+phase 3: 
+	the logfilesize was 800k with the append  fix. So it fixed that, 
+	missing writes into the file.				
