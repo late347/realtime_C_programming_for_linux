@@ -6,4 +6,4 @@
 
 -we mostly had soft real-time systems
 
--executable files were mostly compiled for Ubuntu  18.04 LTS, some exercises had obj files which had to be linked (which were also included in the folders)
+-executable files were mostly compiled for Ubuntu  18.04 LTS, some exercises had obj files which had to be linked (which were also included in the folders, together with the sources)
