@@ -1,0 +1,23 @@
+*mainthread
+- waits until all subthreads are done working
+-displays value of common counter, I think...
+-
+
+
+
+
+*each subthread 
+-increments the commoncounter 1 000 000 times
+- there is counterArray which is in scope of main funciton,
+- subthread incremets their own "counter" inside counerArray
+
+
+*what is problem?
+-probably the problem is read-modify-write cycle for threads, when accessing commonCounter globalVAr
+-increment is not normally atomic
+-so context switching fucks it up
+-mutex can be used to protect the commoncounter before increments are done
+into common counter
+-expected results would be that always the localcounters are correct amounts
+-expected results for commoncounter in phase1 is that it loses increments (commonIncr < subThreadAmount*incrAmount)
+-expected results for mutexprotected commoncounter in phase2 is that increments are correct (commonIncr == subThreadAmount * incrAmount)
